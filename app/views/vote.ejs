@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<% include partials/head.ejs %>
+
+<body class="sub_page">
+    
+    <div class="hero_area">
+        <!-- header section strats -->
+        <% include partials/header.ejs %>
+        <!-- end header section -->
+    </div>  
+  <div style="margin: 0 auto; padding-top: 25px;align-content: center; text-align: center; margin-top: 150px;">
+      <h1>Vote for a Candidate</h1>
+      <div style="padding-top: 25px;text-align: center;display: inline-block;">
+          <button id="vote" style="background-color: rgb(98, 98, 176);color: white;" onclick="vote('candidate1')">Candidate 1</button>
+          <button id="vote" style="background-color: rgb(184, 59, 59);color: white"onclick="vote('candidate2')">Candidate 2</button>
+          <button id="vote" style="background-color: rgb(186, 186, 186);color: white"onclick="vote('blank')">Blank</button>
+          <div id="vote_status" style="margin-top: 10px; color:greenyellow"></div>
+      </div>
+  </div>
+  <div style="text-align: center;padding-top: 50px;">
+      <a href="/results">See results</a>    
+  </div>
+  <script src="js/utils.js"></script>
+
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>

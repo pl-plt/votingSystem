@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<% include partials/head.ejs %>
+
+<body class="sub_page">
+    
+    <div class="hero_area">
+        <!-- header section strats -->
+        <% include partials/header.ejs %>
+        <!-- end header section -->
+    </div>  
+
+    <div style="margin: 0 auto; padding-top: 25px;align-content: center; text-align: center;">
+      <h1>Results</h1>
+        <div style="margin: 0 auto; padding-top: 25px;; max-height: 750px !important; max-width: 750px !important;align-items: center;">
+            <canvas id="myChart" style="display: flex;"></canvas>
+        </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Candidate 1', 'Candidate 2', 'Blank votes'],
+        datasets: [{
+          label: '#Number of Votes',
+          data: [12, 19, 3, ], //TODO add real number from database
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
